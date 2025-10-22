@@ -39,12 +39,12 @@ const login = async (req, res) => {
 
   const user = await User.findOne({ username });
   if (!user) {
-    throw new UnauthenticatedError("Invalid Credentials");
+    throw new UnauthenticatedError("username or password is incorrect");
   }
 
   const isPasswordCorrect = await user.comparePassword(password);
   if (!isPasswordCorrect) {
-    throw new UnauthenticatedError("Invalid Credentials");
+    throw new UnauthenticatedError("username or password is incorrect");
   }
 
   const token = user.createJWT();
