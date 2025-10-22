@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <form class="form">
+        <h3>Register</h3>
+        <div class="form-row">
+          <label>Username</label>
+          <input type="text" class="form-input username-input" required />
+        </div>
+        <div class="form-row">
+          <label>Password</label>
+          <input type="password" class="form-input password-input" required />
+        </div>
+        <div class="form-alert"></div>
+        <button type="submit" class="btn btn-block">Create Account</button>
+        <p class="text-small">
+          Already have an account?
+          <a href="/login.html">Login</a>
+        </p>
+      </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./register.js"></script>
+  </body>
+</html>

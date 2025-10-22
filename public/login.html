@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <form class="form">
+        <h3>Login</h3>
+        <div class="form-row">
+          <label>Username</label>
+          <input type="text" class="form-input username-input" required />
+        </div>
+        <div class="form-row">
+          <label>Password</label>
+          <input type="password" class="form-input password-input" required />
+        </div>
+        <div class="form-alert"></div>
+        <button type="submit" class="btn btn-block">Login</button>
+        <p class="text-small">
+          Don’t have an account?
+          <a href="/register.html">Register</a>
+        </p>
+      </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./login.js"></script>
+  </body>
+</html>
