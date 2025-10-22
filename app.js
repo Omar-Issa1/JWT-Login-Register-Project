@@ -22,14 +22,15 @@ app.use(errorHandlerMiddleware);
 
 const port = process.env.PORT || 3000;
 
-const start = async () => {
-  try {
-    await connectDB(process.env.MONGO_URI);
-    console.log("Connected to MongoDB");
-    app.listen(port, () => console.log(`Server running on port ${port}...`));
-  } catch (error) {
-    console.log(error);
-  }
+let isConnected = false;
+const connectToDatabase = async () => {
+  if (isConnected) return;
+  await connectDB(process.env.MONGO_URI);
+  isConnected = true;
+  console.log("Connected to MongoDB");
 };
 
-start();
+export default async (req, res) => {
+  await connectToDatabase();
+  return app(req, res);
+};
