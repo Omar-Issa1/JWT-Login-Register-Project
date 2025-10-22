@@ -8,6 +8,9 @@ const register = async (req, res) => {
   if (!username || !password) {
     throw new BadRequestError("Please provide username and password");
   }
+  if (username.length < 3) {
+    throw new BadRequestError("Username must be at least 3 characters long");
+  }
 
   if (password.length < 6) {
     throw new BadRequestError("Password must be at least 6 characters long");
