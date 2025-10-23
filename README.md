@@ -139,4 +139,4 @@ You can access the live version here:
 
 ## 📝 License
 
-This project is licensed under the **MIT License** — feel free to use and modify it.
+This project is licensed under the [MIT License](LICENSE)* — feel free to use and modify it.
